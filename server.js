@@ -9,7 +9,7 @@ server.on('require',function(req,res){
 	router.route("http://39.108.117.154:80"+req.url);
 });
 
-server.listen(80,'39.108.117.154',1024,function(){
+server.listen(80,'localhost',1024,function(){
 	console.log("开始监听");
 });
 
