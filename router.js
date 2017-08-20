@@ -16,3 +16,5 @@ var route = function(url){
 		console.log("200");
 	}
 }
+
+module.exports.route = route;
