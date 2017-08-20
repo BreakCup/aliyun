@@ -1,4 +1,4 @@
-var url = require('url');
+var URL = require('url');
 
 var reqStr = {
 	jump:'/jump',
@@ -6,8 +6,8 @@ var reqStr = {
 };
 
 //路由函数
-var route = function(geturl){
-	var myURL = new url.URL(geturl);
+var route = function(url){
+	var myURL = new URL(url);
 	if(!reqStr[myURL.pathname]){
 		console.log("404");
 		return 404;
