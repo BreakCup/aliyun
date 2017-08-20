@@ -10,10 +10,10 @@ var server = http.createServer((req,res)=>{
 var recive = function(req,res){
 	console.log("接收到请求");
 	req.setEncoding('utf-8');
-	router.route("http://39.108.117.154:80"+req.url);
-	response.writeHead(200,{"Content-type":"text/plain"});
-	response.write("aa");
-	response.end();
+	router.route("http://localhost:80"+req.url);
+	res.writeHead(200,{"Content-type":"text/plain"});
+	res.write("aa");
+	res.end();
 };
 
 

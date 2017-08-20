@@ -2,7 +2,7 @@ var URL = require('url');
 
 var reqStr = {
 	jump:'/jump',
-	getAcessToken:'/GAT'
+	getAcessToken:'/getAcessToken'
 };
 
 //路由函数
@@ -12,8 +12,13 @@ var route = function(url){
 		console.log("404");
 		return 404;
 	}
-	else{
+	else if(myURL.pathname==reqStr.getAcessToken){
+		console.log("getAcessToken");
+		return 200;
+
+	}else{
 		console.log("200");
+		return 200;
 	}
 }
 
