@@ -7,7 +7,7 @@ var reqStr = {
 
 //路由函数
 var route = function(url){
-	var myURL = new URL(url);
+	var myURL = URL.parse(url,true);
 	if(!reqStr[myURL.pathname]){
 		console.log("404");
 		return 404;
